@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-  resources :microposts
+  resources :issues
   resources :users
-  root 'users#index'
-  # root 'application#hello'
+  # root 'users#index'
+  root to: "issues#index"
   
-  namespace 'api' do
-    namespace 'v1' do 
-      resources :users
-  end
-end
+
 end
